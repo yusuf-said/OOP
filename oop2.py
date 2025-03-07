@@ -56,3 +56,7 @@ class ogretmen(calisan_genel_bilgi):
         return self.taban_maas + self.calisma_suresi(self) * (7)
 
 
+
+muhendis1 = Muhendis("Ahmet", "Yağcı", 1978, 2019, "yapay zeka")
+muhendis1.calisan_bilgi()
+print(muhendis1.maas_hesaplama())
