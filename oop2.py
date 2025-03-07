@@ -29,7 +29,7 @@ class Muhendis(calisan_genel_bilgi):
         print(f'Adı: {self.ad}, Soyad: {self.soyad}, Calısma Alanı: {self.calisma_alani},meslek türü: mühendislik , mail adresi: {self.calisan_mail()}')
 
     def maas_hesaplama(self):
-        return self.taban_maas + self.calisma_suresi(self) * (8.5)
+        return self.taban_maas + self.calisma_suresi() * (8.5)
 
 class isci(calisan_genel_bilgi):
     taban_maas = 20000 #isci taban maas
@@ -41,7 +41,7 @@ class isci(calisan_genel_bilgi):
         print(f'Adı: {self.ad}, Soyad: {self.soyad}, Calısma Alanı: {self.calisma_alani},meslek türü: isci , mail adresi: {self.calisan_mail()}')
 
     def maas_hesaplama(self):
-        return self.taban_maas + self.calisma_suresi(self) * (6.5)
+        return self.taban_maas + self.calisma_suresi() * (6.5)
 
 class ogretmen(calisan_genel_bilgi):
     taban_maas = 30000 #öğretmenlik taban maas
@@ -53,10 +53,13 @@ class ogretmen(calisan_genel_bilgi):
         print(f'Adı: {self.ad}, Soyad: {self.soyad}, Branş: {self.branch},meslek türü: öğretmenlik , mail adresi: {self.calisan_mail()}')
 
     def maas_hesaplama(self):
-        return self.taban_maas + self.calisma_suresi(self) * (7)
+        return self.taban_maas + self.calisma_suresi() * (7)
 
 
 
 muhendis1 = Muhendis("Ahmet", "Yağcı", 1978, 2019, "yapay zeka")
+
+
 muhendis1.calisan_bilgi()
+
 print(muhendis1.maas_hesaplama())
